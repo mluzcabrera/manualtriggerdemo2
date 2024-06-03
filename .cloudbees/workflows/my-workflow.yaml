@@ -1,6 +1,12 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
+
+on:
+  push:
+    branches:
+      - '**'
+
 jobs:
   build:
     steps:
@@ -8,6 +14,4 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello world"
-on:
-  workflow_dispatch:
+          echo "hello world que está pasando"
