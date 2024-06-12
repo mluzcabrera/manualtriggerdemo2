@@ -1,6 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: My workflow
+name: My workflow 10
 on:
   workflow_dispatch:
 jobs:
@@ -10,4 +10,4 @@ jobs:
         uses: docker://golang:1.20.3-alpine3.17
         shell: sh
         run: |
-          echo "hello mlcb"
+          echo "hello mlcb wf10"
